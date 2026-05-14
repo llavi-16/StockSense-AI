@@ -9,8 +9,7 @@ from tensorflow.keras.models import Sequential, load_model
 from tensorflow.keras.layers import LSTM, Dense, Dropout
 from tensorflow.keras.optimizers import Adam
 
-#from .utils import get_close_prices, scale_series, create_sequences, inverse_scale
-from utils import get_close_prices, scale_series, create_sequences, inverse_scale
+from backend.utils import get_close_prices, scale_series, create_sequences, inverse_scale
 MODELS_DIR = Path(os.getenv("MODELS_DIR", Path(__file__).resolve().parent.parent / "models"))
 MODELS_DIR.mkdir(parents=True, exist_ok=True)
 

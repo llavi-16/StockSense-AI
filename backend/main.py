@@ -2,9 +2,7 @@ from typing import Optional
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-
-#from .model import fetch_stock_history, train_lstm_for_ticker, predict_next_days
-from model import fetch_stock_history, train_lstm_for_ticker, predict_next_days
+from backend.model import fetch_stock_history, train_lstm_for_ticker, predict_next_days
 app = FastAPI(title="Stock Market Trend Prediction API", version="1.0.0")
 
 
