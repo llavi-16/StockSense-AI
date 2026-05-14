@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Trend Prediction (LSTM)</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="app-container">
+      <header>
+        <h1>Stock Market Trend Prediction</h1>
+        <p>LSTM-based forecasting</p>
+      </header>
+
+      <main>
+        <section class="controls">
+          <div class="input-group">
+            <label for="ticker-input">Stock Ticker</label>
+            <input
+              id="ticker-input"
+              type="text"
+              placeholder="e.g. AAPL, TSLA"
+              maxlength="10"
+            />
+          </div>
+          <div class="input-group inline">
+            <div>
+              <label for="days-input">Days Ahead</label>
+              <input id="days-input" type="number" min="1" max="30" value="7" />
+            </div>
+            <div>
+              <label for="epochs-input">Training Epochs</label>
+              <input
+                id="epochs-input"
+                type="number"
+                min="1"
+                max="50"
+                value="10"
+              />
+            </div>
+          </div>
+          <button id="predict-btn">Predict</button>
+          <div id="loading" class="loading hidden">Running LSTM model...</div>
+          <div id="error" class="error hidden"></div>
+        </section>
+
+        <section class="summary">
+          <div class="card">
+            <h2>Current Trend</h2>
+            <p id="trend-text">Awaiting prediction...</p>
+          </div>
+          <div class="card">
+            <h2>Last Close vs Next</h2>
+            <p id="last-values">-</p>
+          </div>
+          <div class="card">
+            <h2>Status</h2>
+            <p id="rmse-text">-</p>
+          </div>
+        </section>
+
+        <section class="chart-section">
+          <h2>Actual vs Predicted Close Price</h2>
+          <canvas id="price-chart"></canvas>
+        </section>
+      </main>
+
+      <footer>
+        <span>Stock prediction &mdash; using LSTM.</span>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
+
