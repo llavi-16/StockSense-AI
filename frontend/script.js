@@ -1,5 +1,4 @@
-// const API_BASE_URL = "http://127.0.0.1:8001";
-const API_BASE_URL = "http://127.0.0.1:8000";
+const API_BASE_URL = "https://stocksense-ai.onrender.com";
 const tickerInput = document.getElementById("ticker-input");
 const daysInput = document.getElementById("days-input");
 const epochsInput = document.getElementById("epochs-input");
