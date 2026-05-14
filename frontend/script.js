@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://stocksense-ai.onrender.com";
+const API_BASE_URL = "https://stocksense-ai-nirk.onrender.com";
 const tickerInput = document.getElementById("ticker-input");
 const daysInput = document.getElementById("days-input");
 const epochsInput = document.getElementById("epochs-input");
